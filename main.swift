@@ -25,20 +25,25 @@ func countCharactersInString(_ inputString: String, _ charString: String) -> [Ch
 //displays the count of each character
 func displayCharacterCounts(_ charCounts: [Character: Int]) {  
   for (char, count) in charCounts {
-    print("The character \(char) appears \(count) time(s).")
+    print("The character \"\(char)\" appears \(count) time(s).")
   }
   print("\n")
 }
 
-//test output
-print("Testing \"Hello, world\" with \"alow\"")
-displayCharacterCounts(countCharactersInString("Hello, world", "alow"))
 
-print("Testing \"A quick brown fox jumps over the lazy dog.\" with \"abcdefghijklmnopqrstuvwxyz\"")
-displayCharacterCounts(countCharactersInString("A quick brown fox jumps over the lazy dog.", "abcdefghijklmnopqrstuvwxyz"))
+//test various scenarios
+var testArguments: [String: String] = [
+  "Hello, World": "alow",
+  "The quick brown fox jumps over the lazy dog": "abcdefghijklmnopqrsTuvwxyz",
+  """
+  This
+  is a test
+  """: " \n",
+  "aaaaaaaaaaaaa": "repeeeeeeeeaaaaaat"
+]
 
-print("Testing \"Heres a tab: \t\" with \"\t\"")
-displayCharacterCounts(countCharactersInString("Heres a tab: \t", "\t"))
-
-print("Testing \"Heres a new line: \n\" with \"\n\"")
-displayCharacterCounts(countCharactersInString("Heres a new line: \n", "\n"))
+for (input, charString) in testArguments {
+  print("Testing \"\(input)\" with \"\(charString)\"")
+  displayCharacterCounts(countCharactersInString(input, charString))
+  print("\n")
+}
