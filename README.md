@@ -16,3 +16,4 @@ This demo is in response to the following prompt:
 
 - For prompt item 2, a "sequence of non-repeating characters" is synonymous with a string of non-repeating characters.
 - The character analysis is case-sensitive. (i.e. A count towards W is not the same as a count towards w.)
+- It is acceptable that the order of count information is non-deterministic.

@@ -39,7 +39,9 @@ var testArguments: [String: String] = [
   This
   is a test
   """: " \n",
-  "aaaaaaaaaaaaa": "repeeeeeeeeaaaaaat"
+  "aaaaaaaaaaaaa": "repeeeeeeeeaaaaaat",
+  "something": "",
+  "": "abc"
 ]
 
 for (input, charString) in testArguments {
